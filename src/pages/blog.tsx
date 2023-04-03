@@ -32,10 +32,18 @@ export default function Blog({ posts }: BlogProps) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = getAllPosts();
-  return {
-    props: {
-      posts,
-    },
+    const allPosts = getAllPosts();
+  
+    // Convert date objects to strings
+    const serializedPosts = allPosts.map((post) => ({
+      ...post,
+      date: post.date.toISOString(),
+    }));
+  
+    return {
+      props: {
+        posts: serializedPosts,
+      },
+    };
   };
-};
+  

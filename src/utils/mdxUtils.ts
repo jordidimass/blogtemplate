@@ -4,6 +4,7 @@ import matter from 'gray-matter';
 import { bundleMDX } from 'mdx-bundler';
 
 const contentDirectory = path.join(process.cwd(), 'src/content');
+console.log('Content directory:', contentDirectory); // Add this line
 
 export function getAllPosts() {
   const fileNames = fs.readdirSync(contentDirectory);

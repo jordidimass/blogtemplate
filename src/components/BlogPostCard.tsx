@@ -18,8 +18,11 @@ export const BlogPostCard: React.FC<BlogPostCardProps> = ({ post }) => {
       <h2 className="text-2xl font-bold mb-2">{title}</h2>
       <p className="text-gray-500 text-sm mb-4">{new Date(date).toLocaleDateString()}</p>
       <p className="text-gray-700 mb-4">{excerpt}</p>
-      <Link href={`/blog/${slug}`} passHref>
-        <a className="text-blue-500 hover:text-blue-600">Read More</a>
+      <Link
+        href={`/blog/${slug}`}
+        passHref
+        className="text-blue-500 hover:text-blue-600">
+        Read More
       </Link>
     </div>
   );

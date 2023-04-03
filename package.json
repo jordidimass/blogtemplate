@@ -23,6 +23,7 @@
     "eslint": "8.37.0",
     "eslint-config-next": "^13.2.4",
     "gray-matter": "^4.0.3",
+    "hotkeys-js": "^3.10.1",
     "mdx-bundler": "^9.2.1",
     "next": "^13.2.4",
     "postcss": "^8.4.21",
